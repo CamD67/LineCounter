@@ -8,10 +8,13 @@ namespace LineCounterConsole
         private static void Main(string[] args)
         {
             Console.WriteLine("Line Counter");
+            Console.WriteLine("Program assumes valid formatting of code (all code isn't on one line, etc.)");
             String path = GetPath();
             LineCounter counter = new LineCounter(path);
             Console.WriteLine("Lines of code in the file: "+counter.CountLines());
             Console.WriteLine("Lines of significant code in the file: "+counter.CountSignificantLines());
+            Console.WriteLine("press enter to exit...");
+            Console.ReadLine();
         }
 
         private static String GetPath()
